@@ -1,0 +1,6 @@
+install.packages('ggplot2')
+library(ggplot2)
+data('diamonds', package = 'ggplot2')
+print(head(diamonds))
+ggplot(diamonds) + geom_point(aes(x = carat, y = depth))
+ggplot(diamonds) + geom_point(aes(x = carat, y = depth, color = cut)) + labs(title = 'Carat vs Depth, by Cut', x = 'Carats (weight)', y = 'Total depth percentage', color = 'Cut quality')
